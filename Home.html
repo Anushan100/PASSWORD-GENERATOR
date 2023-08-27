@@ -1,0 +1,45 @@
+<html>
+    <link rel="stylesheet" href="Style.css">
+    <title>PASSWORD GENERATOR</title>
+    <body>
+    <div class="container">
+        <h1><div id="header">GENERATOR A</div><span>Random Password</span></h1>
+        <div class="display">
+            <input type="text"  placeholder="password" id="password">
+            <button onclick="genratepassword();"><image src="generate.png" width="25px" height="25px"></image>GENRATE PASSWORD</button>
+        </div>
+    </div>
+</body>
+
+
+<script>
+    var passwordbox=document.getElementById("password")
+    var lowerletter='abcdefghijklmnopqrstuvwxyz'
+    var upperletter="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+    var number="0123456789"
+    var symbol="!@#$%^*&"
+
+function genratepassword(){
+
+    //alert("T1")
+    let password="";
+    //alert("T@@")
+    password+=lowerletter[Math.floor(Math.random()*lowerletter.length)];
+    password+=upperletter[Math.floor(Math.random()*upperletter.length)];
+    password+=number[Math.floor(Math.random()*number.length)];
+    password+=symbol[Math.floor(Math.random()*symbol.length)];
+    // alert("password===="+password)
+     passwordbox.value=password;
+    //alert("passwordbox.value==="+passwordbox)
+    // alert("T2")
+}
+
+</script>
+
+</html>
+
+
+
+
+
